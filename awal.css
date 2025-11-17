@@ -1,0 +1,404 @@
+* {
+  /* style untuk semua elemen di html */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /*style untuk html*/
+  scroll-behavior: smooth; /*scrollnya smooth*/
+}
+
+body {
+  /*style body*/
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff; /*background putih*/
+  color: #333; /*warna teks hitam*/
+  line-height: 1.6; /*memberi line-height*/
+}
+
+.navbar {
+  /* style bar navigasi  */
+  background: linear-gradient(
+    135deg,
+    #667eea 0%,
+    #764ba2 100%
+  ); /*warna gradiasi background navigasi*/
+  padding: 0; /*padding 0*/
+  position: fixed; /*padding akan selalu di tempatnya*/
+  top: 0; /*tidak ada top*/
+  width: 100%; /*widthnya seukuran html*/
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /*bayangan box*/
+}
+
+.nav-container {
+  /*style untuk container navigasi*/
+  max-width: 1200px; /*max ukuran lebar 1200px*/
+  margin: 0 auto; /* memberi margin*/
+  padding: 15px 40px; /*memberi padding*/
+  display: flex; /*display menjadi fleksibel*/
+  justify-content: space-between; /*ratanya akan sama tiap objek, jadi jangka dari objek 1 ke 2 dan ke 3 tidak berubah*/
+  align-items: center; /*alignnya tengah*/
+}
+
+.nav-logo {
+  /*style untuk logo navigasinya */
+  color: white; /*warna teks putih*/
+  font-size: 24px; /*ukuran teks*/
+  font-weight: bold; /*teks menjadi bold*/
+  display: flex; /*logo menjadi fleksibel*/
+  align-items: center; /*align tengah*/
+  gap: 10px; /*memberi gap */
+}
+.nav-logo img {
+  /*style untuk gambar logo*/
+  height: 65px;
+  width: 65px;
+}
+
+.nav-menu {
+  /*style untuk navigasinya kayak ul, dan li*/
+  display: flex; /*display menjadi fleksibel*/
+  list-style: none; /*tidak ada list style seperti dot*/
+  gap: 40px; /*memberi gap*/
+}
+
+.nav-link {
+  /*style untuk class nav-link yang ada pada navigasi menu*/
+  color: white; /*warna teks menjadi putih*/
+  text-decoration: none; /*tidak ada underline */
+  font-weight: 500; /*memberi ketebalannya*/
+  transition: all 0.3s ease; /*memberikan transisi*/
+  position: relative; /*posisinya relatif*/
+}
+
+.nav-link:hover {
+  /*style apabila ada cursor di nav-link/navigasi*/
+  color: #ffb3d9;
+}
+
+.nav-link::after {
+  /*style setelah navigasi diclick*/
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0; /* tidak ada lebar*/
+  height: 2px; /*tinggi*/
+  background: #ffb3d9; /*backgroundnya*/
+  transition: width 0.3s ease; /*transisi*/
+}
+
+.nav-link:hover::after {
+  /*style setelah cursor berada di atas nav-link*/
+  width: 100%;
+}
+
+.pembuka {
+  /*sttyle untuk halaman pembuka*/
+  margin: 50px;
+  padding: 50px;
+  width: 50%;
+}
+
+.pembuka h1 {
+  /*style untuk halaman pembuka heading 1*/
+  font-weight: bold;
+  font-size: 60px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: block;
+}
+
+.pembuka p {
+  /*style untuk halaman pembuka paragraf*/
+  font-size: 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 20px;
+}
+
+.btn-mulai {
+  /*style untuk button/tombol */
+  background: linear-gradient(
+    135deg,
+    #667eea 0%,
+    #764ba2 100%
+  ); /* warna gradien*/
+  color: white; /*warna teks*/
+  padding: 15px 40px; /*memberi padding*/
+  border: none; /*tidak ada warna border*/
+  border-radius: 50px; /*memberi lengkungan pada ujung border*/
+  font-size: 16px; /* ukuran font*/
+  font-weight: bold; /*teks menjadi bold */
+  cursor: pointer; /*cursor pointer saat di button*/
+  transition: all 0.3s ease; /*memberikan transisi*/
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4); /*memberi bayangan pada box*/
+  text-transform: uppercase; /*semuanya kapital*/
+  letter-spacing: 1px; /*tiap letter ada spasinya*/
+}
+
+.btn-mulai:hover {
+  /*style jika ada cursor yang berada di atas button*/
+  transform: translateY(-3px); /*membuat button naik sedikit*/
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6); /*membuat adanya shadow pada bawah button saat ada cursor*/
+}
+
+.btn-mulai a {
+  /*mengubah warna teks a*/
+  color: white; /*warna teks putih*/
+  text-decoration: none; /*tidak ada dekorasi teks*/
+}
+
+.tentang {
+  /*style untuk halaman tentang kami*/
+  padding: 80px 40px;
+}
+
+.tentang h1 {
+  /*style untuk mengubah teks heading 1 pada halaman tentang */
+  font-size: 2.5em; /*mengatur ukuran teks*/
+  margin-bottom: 50px; /*memberi margin bawah*/
+  color: #333; /*memberi warna teks*/
+  text-align: center; /*teks align tengah*/
+}
+.tentang .penjelasan {
+  /*style untuk halaman penjelasan paragraf*/
+  max-width: 1200px; /*maksimal lebar menjadi 1200 px*/
+  margin: 0 auto; /*memberi margin*/
+  display: flex; /*display menjadi fleksibel*/
+  gap: 80px; /*memberi gap dengan elemen lain*/
+  align-items: center; /*align tengah*/
+  justify-content: center; /*align tengah*/
+}
+
+.tambahan {
+  /**/
+  display: flex; /*display fleksibel*/
+  justify-content: center; /*align tengah*/
+  align-items: center; /*align tengah*/
+  max-width: 1200px; /*max lebar 1200 px*/
+  margin: 0 auto; /*memberi margin*/
+  gap: 80px; /*memberi gap*/
+}
+
+.tambahan-lagi {
+  /*style untuk tambahan info*/
+  background: white; /*background putih di halamannya*/
+  padding: 30px; /*memberi padding */
+  border-radius: 12px; /*memberi border-radius*/
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /*memberi bayangan */
+}
+
+.tambahan-lagi h3 {
+  /*style untuk heading 3 pada halaman tambahan-lagi*/
+  font-size: 2.5em; /*ukuran teks*/
+  color: #667eea; /*warna teks*/
+  margin-bottom: 10px; /*margin bawah*/
+}
+
+.tambahan-lagi p {
+  /*style buat paragraf pada halaman tambahan-lagi*/
+  color: #666;
+  font-size: 1.1em;
+}
+
+.ceo {
+  /*mengatur halaman ceo*/
+  background-image: url(pink.jpg); /*memberi gambar warna pink yang diambil dari gugel*/
+  background-size: cover; /*sizenya memenuhi border*/
+  background-position: center; /*posisi dari tengah*/
+  margin-bottom: 100px; /*margin bawah*/
+}
+.ceo h1 {
+  /*mengatur font pada heading 1 di halaman/div ceo*/
+  font-size: 2.5em; /*ukuran font*/
+  margin-bottom: 50px; /*margin bawah*/
+  color: #333; /*warna font*/
+  text-align: center; /*teks align tengah*/
+}
+
+.ceo .anggota {
+  /*mengatur lebih spesifik di div anggota*/
+  display: flex; /*display menjadi fleksibel*/
+  justify-content: space-evenly; /*semua jeda dengan elemen fleksibel lainnya rata*/
+  align-content: center; /*align tengah*/
+  margin: 20px; /*margin */
+}
+
+.ceo .anggota .orang {
+  /*mengatur layout anggo ta teks dengan gambarnya masing-masing*/
+  display: flex; /*display menjadi fleksibel*/
+  justify-content: center; /*align tengah*/
+  align-items: center; /*align tengah*/
+  flex-direction: column; /*fleksibel menjadi kolom/vertikal*/
+}
+
+.ceo .anggota .orang img {
+  /*mengatur gambar orangnya*/
+  object-fit: cover; /*fit objeknya memenuhi border*/
+  object-position: center; /*objek dari tengah*/
+  height: 250px; /*tinggi img*/
+  width: 250px; /*lebar img*/
+  border-radius: 50%; /*membuatnya menjadi lingkaran*/
+  margin-bottom: 20px; /*margin bawah*/
+  border: 1px solid #667eea; /*mengatur warna border*/
+}
+
+.anggota p {
+  /*mengatur teks paragraf pada anggota (jadi ngatur namanya dmn)*/
+  text-align: center; /*align teks ke tengah*/
+  align-items: center; /*align semua items ke tengah*/
+  font-weight: bold; /*membuat teksnya bold*/
+  font-family: Verdana, Geneva, Tahoma, sans-serif; /*jenis font*/
+  font-size: 1.1em; /*ukuran font*/
+}
+
+.anggota img:hover {
+  /*mengatur kalo ada mouse yang menimpah gambar*/
+  transform: translateY(
+    -10px
+  ); /*ketika ada mouse, objeknya akan sedikit ke atas*/
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /*memberi bayangan ketika ada mouse*/
+}
+
+.keunggulan h1 {
+  /*mengatur heading 1 pada keunggulan*/
+  font-size: 2.5em; /* ukuran teks*/
+  margin-bottom: 50px; /*margin bawah dengan elemen lain*/
+  color: #333; /*warna teks*/
+  text-align: center; /*teks align tengah*/
+}
+
+.keunggulan {
+  /*mengatur halaman/div keunggulan*/
+  padding: 80px 40px; /* memberi padding*/
+  background: #f8f9fa; /*background warna putih*/
+}
+
+.keunggulan-grid {
+  /*mengatur halaman keunggulan-grid yang namanya grid soalnya displaynya grid*/
+  display: grid; /*display grid*/
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /*tipe grid dari display grid*/
+  gap: 30px; /* memberi gap dengan elemen lain*/
+  max-width: 1200px; /*max width dari halaman keunggulan-grid 1200px*/
+  margin: 0 auto; /*memberi margin */
+}
+
+.kartu {
+  /*mengatur layout keunggulan seperti kartu*/
+  background: white; /* bekgron warna putih*/
+  padding: 40px 30px; /*memberi padding */
+  border-radius: 12px; /*agar ujung border tidak lancip*/
+  text-align: center; /*mengatur agar teks alignnya di tengah*/
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /*box shadow */
+  transition: all 0.3s ease; /*transisi */
+}
+
+.kartu:hover {
+  /*style jika ada cursor yang menimpa div kartu*/
+  transform: translateY(
+    -8px
+  ); /*agar kalau ada mouse, objeknya akan sedikit ke atas */
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15); /*memberi bayangan warna ungu*/
+}
+
+.keunggulan-icon {
+  /*icon dari keunggulannya*/
+  font-size: 3em; /*ukuran teks*/
+  margin-bottom: 15px; /*margin bawah*/
+}
+
+.kartu h3 {
+  /*mengatur teks heading 3*/
+  font-size: 1.3em; /*ukuran font*/
+  color: #333; /*warna font */
+  margin-bottom: 15px; /*margin bawah*/
+}
+
+.kartu p {
+  /*mengatur teks paragraf*/
+  color: #666; /*warna teks*/
+  line-height: 1.6; /*mengatur tinggi linenya setiap teks agar tidak terlalu dekat*/
+}
+
+.perkenalan {
+  display: flex; /*membuat halaman perkenalan fleksibel*/
+}
+
+.menu {
+  /*mengatur agar letak elemen di div menu bisa bergerak */
+  display: flex;
+}
+.menu img {
+  /*mengatur gambar makanan vektor junkfood*/
+  object-fit: contain; /*fit objek contain / semua terlihat*/
+  object-position: center; /*posisi objek di tengah*/
+  display: flex; /*membuat display fleksibel*/
+  flex: 1; /*flex 1 untuk membuat gambar mengembang*/
+  border-radius: 10px; /*mengatur radius border*/
+}
+
+.kontak h1 {
+  /*mengatur teks pada heading 1*/
+  font-size: 2.5em; /*mengatur font-size*/
+  text-align: center; /*mengatur align teks menjadi tengah*/
+  margin-bottom: 60px; /*memberi margin bawah*/
+  color: #333; /*mengatur warna teks */
+}
+
+.sosial {
+  /*mengatur kontak sosial media*/
+  display: flex; /* membuat socials bisa diatur letak sehingga mudah diletakkan */
+  gap: 20px; /*  mengatur jarak dengan elemen lain */
+  font-size: 60px; /*mengatur font-size*/
+  justify-content: center; /*align tengah*/
+  align-items: center; /*align tengah*/
+}
+
+.slide-gambar {
+  height: 650px; /*tinggi*/
+  background-image: url("fanta.jpg"); /*tampilan awal*/
+  background-size: cover; /*membuat gambar tidak mengulang-ulang dan memenuhi screen */
+  background-position: center; /*posisinya di tengah*/
+  animation: slide 10s infinite; /*mengulang setiap 10 detik secara tidak terbatas*/
+}
+
+@keyframes slide {
+  /*untuk slider gambar*/
+  10% {
+    /*saat 10%*/
+    background-image: url("fanta.jpg");
+  }
+
+  25% {
+    /*saat 25%*/
+    background-image: url(mcflurry.jpg);
+  }
+
+  50% {
+    /*saat 50%*/
+    background-image: url("bigbub.jpg");
+  }
+
+  75% {
+    /*saat 75%*/
+    background-image: url("icecone.jpg");
+  }
+
+  100% {
+    /*saat 100%*/
+    background-image: url("doubecheese.jpg");
+  }
+}
+
+.slide-gambar {
+  height: 500px; /*tinggi*/
+  width: 500px; /* lebar */
+  display: flex; /*agar displaynya fleksibel/bisa diatur*/
+  margin: 100px; /* memberi margin */
+  object-fit: cover; /* agar objek gambar tidak berulang-ulang dan memenuhi bordernya*/
+}
